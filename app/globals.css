@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-bg: #100b24;
+    --color-surface: #1c1a2e;
+    --color-border: #2d2b47;
+    --color-primary: #a855f7;
+    --color-secondary: #06b6d4;
+    --color-success: #22c55e;
+    --color-warning: #f59e0b;
+    --color-text: #fafafa;
+    --color-muted: #8b8a9a;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: "Inter", sans-serif;
+}
+
+.bg-bg { background-color: var(--color-bg); }
+.bg-surface { background-color: var(--color-surface); }
+.bg-primary { background-color: var(--color-primary); }
+.bg-secondary { background-color: var(--color-secondary); }
+.bg-success { background-color: var(--color-success); }
+
+.text-text { color: var(--color-text); }
+.text-muted { color: var(--color-muted); }
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-success { color: var(--color-success); }
+.text-warning { color: var(--color-warning); }
+
+.border-border { border-color: var(--color-border); }
+.border-primary { border-color: var(--color-primary); }
+
+.hover-lift {
+  transition: transform 150ms ease, border-color 150ms ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+}
